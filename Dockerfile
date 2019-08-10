@@ -1,6 +1,7 @@
 FROM maven:3.6.1-jdk-8
 
 RUN apt-get update && \
+	apt-get install fakeroot && \
     apt-get install --no-install-recommends -y --force-yes openjfx && \
     apt-get clean && \
     rm -f /var/lib/apt/lists/*_dists_*
